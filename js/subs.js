@@ -1,11 +1,12 @@
 "use strict"
 
-const SubApi = "http://evaclue.com:8002" | "https://evaclue.com:8002"
+const SubApi = "http://evaclue.com:8002"
 
 const subEmail = document.getElementById("subEmail")
 const subStatus = document.getElementById("subStatus")
 
 async function subSubmit(){
+    console.log(SubApi)
     console.log("starting ...")
     console.log(subEmail.value)
     const resp = await fetch(`${SubApi}/notification/v1/sub`,{
